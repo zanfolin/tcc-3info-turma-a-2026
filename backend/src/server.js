@@ -33,7 +33,13 @@ server.get("/", (req, res) => {
     res.send("Rota Raiz " + Date());
 });
 
-server.get('/users',()=>{});
+server.get('/users',(req, res)=>{
+    return res.status(200).json({
+        error: false,
+        message: 'Users list',
+        result: users
+    });
+});
 
 //Iniciando o servidor na porta 3000
 /**

@@ -13,11 +13,19 @@ import express from 'express';
 //Instanciando o servidor express() //criando o servidor api no sistema
 const server = express();
 
+const users = [
+    { id: 1, name: 'João da Silva', gender: 'M', email: 'joao.silva@email.com' },
+    { id: 2, name: 'Maria Mariana', gender: 'F', email: 'maria.ariana@email.com' },
+    { id: 3, name: 'Claudia Goes', gender: 'F', email: 'claudia.oes@email.com' },
+    { id: 4, name: 'Cristiano Ronaldo', gender: 'M', email: 'cristiano.ronaldo@email.com' },
+    { id: 5, name: 'Eddaughter Oliveira', gender: 'F', email: 'eddaughter.oliveira@email.com' },
+];
+
 /**
  * 1o. Parâmetro - Rota (endpoint)
  * 2o. Parâmetro - Callback (função a ser executada quando a rota for acessada)
  */
-server.get("/", (req, res)=>{
+server.get("/", (req, res) => {
     /**
      * req - Objeto de requisição (request)
      * res - Objeto de resposta (response)
@@ -32,6 +40,6 @@ server.get("/", (req, res)=>{
  * 1o. Parâmetro - Porta (número da porta onde o servidor irá escutar as requisições)
  * 2o. Parâmetro - Callback (função a ser executada quando o servidor for iniciado)
  */
-server.listen(3000, ()=>{
+server.listen(3000, () => {
     console.log("Server on");
 });

@@ -33,6 +33,8 @@ server.get("/", (req, res) => {
     res.send("Rota Raiz " + Date());
 });
 
+server.get('/users',()=>{});
+
 //Iniciando o servidor na porta 3000
 /**
  * listen() - Método para iniciar o servidor

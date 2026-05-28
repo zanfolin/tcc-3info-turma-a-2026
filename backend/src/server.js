@@ -1,6 +1,16 @@
+/**
+ * 1. fazer download da biblioteca: npm install express
+ *      cria um servidor de páginas web/ -> nos criaremos uma api
+ * 2. importar as funções da biblioteca no meu projeto
+ *      linha 8 (import expres .....)
+ * 3. instanciar as bibliotecas/funções (jogar para memória e executar) 
+ * 
+ * 4. colocar o servidor web para escutar na porta específica
+ */
+
 import express from 'express';
 
-//Instanciando o servidor express()
+//Instanciando o servidor express() //criando o servidor api no sistema
 const server = express();
 
 /**
@@ -23,8 +33,5 @@ server.get("/", (req, res)=>{
  * 2o. Parâmetro - Callback (função a ser executada quando o servidor for iniciado)
  */
 server.listen(3000, ()=>{
-    console.log("Server on port 3000");
+    console.log("Server on");
 });
-
-
-

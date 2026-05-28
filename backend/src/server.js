@@ -33,6 +33,20 @@ server.get("/", (req, res) => {
     res.send("Rota Raiz " + Date());
 });
 
+//Rota para acessar um usuário específico por ID
+server.get("/users/:id", (req, res) => {
+    //Obtendo o id da rota
+    const id = parseInt(req.params.id); 
+    //Buscando o usuário com o id correspondente
+    const user = users.find(u => u.id === id);
+
+    return res.status(200).json({
+        error: false,
+        message: 'User found',
+        result: user
+    });
+});
+
 server.get('/users',(req, res)=>{
     return res.status(200).json({
         error: false,
